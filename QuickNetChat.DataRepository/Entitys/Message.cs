@@ -16,7 +16,6 @@ namespace QuickNetChat.DataRepository.Entitys
         [Required]
         public User Author { get; set; }
 
-
         public ICollection<Media> Media { get; set; }
     }
 }

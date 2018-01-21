@@ -12,7 +12,6 @@ namespace QuickNetChat.DataRepository.Entitys
         /// <summary>
         /// E-Mail adress of the User.
         /// </summary>
-        [Column(Order = 1), Required]
         public string Mail { get; set; }
 
         /// <summary>
@@ -25,7 +24,7 @@ namespace QuickNetChat.DataRepository.Entitys
         /// Contains the Ip-Adress of the user as byte array.
         /// Can be Ipv4 and Ipv8
         /// </summary>
-        [Required, MinLength(4), MaxLength(16)]
+        [MinLength(4), MaxLength(16)]
         public byte[] IpAddressBytes { get; set; }
 
 

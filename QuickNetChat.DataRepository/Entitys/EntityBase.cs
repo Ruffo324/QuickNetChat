@@ -18,11 +18,5 @@ namespace QuickNetChat.DataRepository.Entitys
         [Required]
         [Column("Id", Order = 0)]
         public int Id { get; set; }
-
-        [Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public DateTime Created { get; set; }
-
-        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public DateTime Updated { get; set; }
     }
 }
