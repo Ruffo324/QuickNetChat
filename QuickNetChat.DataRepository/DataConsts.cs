@@ -8,7 +8,7 @@
         internal const string DatabaseName = "QuickNetChat";
 
         /// <summary>
-        /// The Connection String for the EntityFramework.
+        /// The Connection String for the EntityFramework. a
         /// </summary>
         internal const string ConnectionString =
             "Data Source=(localdb)\\MSSQLLocalDB;" + // <- LocalDB

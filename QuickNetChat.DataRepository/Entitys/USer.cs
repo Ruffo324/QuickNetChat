@@ -16,7 +16,7 @@ namespace QuickNetChat.DataRepository.Entitys
         public string Mail { get; set; }
 
         /// <summary>
-        /// Name of the user
+        /// Name of the user. 
         /// </summary>
         [Required]
         public string Name { get; set; }

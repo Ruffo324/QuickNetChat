@@ -13,7 +13,7 @@ namespace QuickNetChat.DataRepository
             new DataContext().FirstInit();
         }
 
-        public static DataContext GetContext()
+        public DataContext GetContext()
         {
             return new DataContext();
         }
