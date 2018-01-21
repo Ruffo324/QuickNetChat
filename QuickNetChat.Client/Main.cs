@@ -40,5 +40,47 @@ namespace QuickNetChat.Client
                 Context.SaveChanges();
             }
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (var Context = Program.DataRepository.GetContext())
+
+            {
+                //lumber-Expression:  // Filter-Condition
+                User user1 = Context.Users.FirstOrDefault((usr) => usr.Id == 5);
+
+                List<DataRepository.Entitys.Message> messages =
+                    Context.Messages.Where((msg) => msg.Text.Contains("Nguyen") && msg.Channel.Id == 5).ToList();
+                foreach (DataRepository.Entitys.Message msg in messages)
+                {
+                    //msg.Text
+                }
+                //messages.Count
+
+
+                if (user1 != null)
+                {
+                    button3.Text = user1.Name;
+                    user1.Name = $"{DateTime.Now}";
+                    Context.SaveChanges();
+                    //int x = int.Parse();
+
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Task(() =>
+            {
+                int i = 0;
+                label1.Text = "";
+                while (true)
+                {
+                    i++;
+                    label1.Text = i.ToString();
+                    Application.DoEvents();
+                }
+            }).RunSynchronously();
+        }
     }
 }

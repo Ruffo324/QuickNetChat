@@ -12,10 +12,18 @@ namespace QuickNetChat.DataRepository.Entitys
         [Required]
         public string Text { get; set; }
 
-        // The Autho of the message
+        /// <summary>
+        /// The Autho of the message
+        /// </summary>
         [Required]
         public User Author { get; set; }
 
-        public ICollection<Media> Media { get; set; }
+        // The Autho of the message
+        public int ChannelID { get; set; }
+        [ForeignKey("ChannelID")]// Message.Channel = Channel.ID
+        public Channel Channel { get; set; }
+
+
+        //   public ICollection<Media> Media { get; set; }
     }
 }

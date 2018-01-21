@@ -23,14 +23,10 @@ namespace QuickNetChat.DataRepository.Entitys
         public bool PublicRoom { get; set; }
 
         /// <summary>
-        /// Owner of the Room
-        /// </summary>
-        [Required]
-        public User Owner { get; set; }
-
-        /// <summary>
         /// Member of the room
         /// </summary>
         public ICollection<User> Member { get; set; }
+
+        public ICollection<Message> Messages { get; set; }
     }
 }
