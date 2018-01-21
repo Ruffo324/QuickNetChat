@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuickNetChat.DataRepository
+namespace QuickNetChat.DataRepository.Enums
 {
-    public class Class1
+    public enum MediaType
     {
+        Image,
+        Audio,
+        Screenshot
     }
 }

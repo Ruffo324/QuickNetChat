@@ -47,12 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataConsts.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="DataRepository.cs" />
+    <Compile Include="Entitys\EntityBase.cs" />
+    <Compile Include="Entitys\Media.cs" />
+    <Compile Include="Entitys\Channel.cs" />
+    <Compile Include="Entitys\User.cs" />
+    <Compile Include="Entitys\Message.cs" />
+    <Compile Include="Enums\MediaType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
