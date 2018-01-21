@@ -75,5 +75,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuickNetChat.DataRepository\QuickNetChat.DataRepository.csproj">
+      <Project>{72f7f5dd-d42d-4fc5-884d-a92abdba3bc3}</Project>
+      <Name>QuickNetChat.DataRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickNetChat.Server\QuickNetChat.Server.csproj">
+      <Project>{c2ae21e3-d85c-4dab-815b-fa7cfef9fae4}</Project>
+      <Name>QuickNetChat.Server</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

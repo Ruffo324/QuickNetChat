@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.Client", "QuickNetChat.Client\QuickNetChat.Client.csproj", "{EA010580-31B7-4AF9-BA59-BA06184DE096}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.Server", "QuickNetChat.Server\QuickNetChat.Server.csproj", "{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.DataRepository", "QuickNetChat.DataRepository\QuickNetChat.DataRepository.csproj", "{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EA010580-31B7-4AF9-BA59-BA06184DE096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA010580-31B7-4AF9-BA59-BA06184DE096}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA010580-31B7-4AF9-BA59-BA06184DE096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
