@@ -31,7 +31,7 @@ namespace QuickNetChat.Client
 
             // Close SplashScreen & Show UI
             splashScreen.Close();
-            Application.Run(new Form1());
+            Application.Run(new Main());
         }
     }
 }

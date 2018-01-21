@@ -20,7 +20,7 @@ namespace QuickNetChat.DataRepository.Entitys
         /// </summary>
         [Required]
         public string Name { get; set; }
-        
+
         /// <summary>
         /// Contains the Ip-Adress of the user as byte array.
         /// Can be Ipv4 and Ipv8
@@ -33,9 +33,10 @@ namespace QuickNetChat.DataRepository.Entitys
         /// Returns only the IpAdress of the User
         /// </summary>
         [NotMapped]
-        public IPAddress IpAddress {
-            get => new IPAddress(IpAddressBytes);
-            set => IpAddressBytes = value.GetAddressBytes();
+        public IPAddress IpAddress
+        {
+            get { return new IPAddress(IpAddressBytes); }
+            set { IpAddressBytes = value.GetAddressBytes(); }
         }
     }
 }
