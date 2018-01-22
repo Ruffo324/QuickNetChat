@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using QuickNetChat.DataRepository.Enums;
 
 namespace QuickNetChat.DataRepository.Entitys

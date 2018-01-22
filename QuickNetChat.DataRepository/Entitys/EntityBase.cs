@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuickNetChat.DataRepository.Entitys
 {
@@ -16,7 +11,7 @@ namespace QuickNetChat.DataRepository.Entitys
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         [Required]
-        [Column("Id", Order = 0)]
-        public int Id { get; set; }
+        [Column("ID", Order = 0)]
+        public int ID { get; set; }
     }
 }

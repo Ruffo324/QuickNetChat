@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Migrations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using QuickNetChat.DataRepository.Entitys;
 
 namespace QuickNetChat.DataRepository
@@ -23,6 +18,7 @@ namespace QuickNetChat.DataRepository
 
         public DataContext() : base(DataConsts.ConnectionString)
         {
+
         }
 
         internal void FirstInit()

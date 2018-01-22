@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuickNetChat.DataRepository.Entitys;
@@ -30,26 +26,26 @@ namespace QuickNetChat.Client
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (var Context = Program.DataRepository.GetContext())
+            using (var context = Program.DataRepository.GetContext())
             {
 
                 User user1 = new User() { Name = "user1" };
                 //new DataRepository.Entitys.User() { Name = "TQN", Mail = "test@web.de" }
-                Context.Users.Add(user1);
+                context.Users.Add(user1);
                 // Program.DataRepository.GetContext().Users.Add(new User() { Name = "TQN", Mail = "test@web.de" });
-                Context.SaveChanges();
+                context.SaveChanges();
             }
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            using (var Context = Program.DataRepository.GetContext())
+            using (var context = Program.DataRepository.GetContext())
 
             {
                 //lumber-Expression:  // Filter-Condition
-                User user1 = Context.Users.FirstOrDefault((usr) => usr.Id == 5);
+                User user1 = context.Users.FirstOrDefault((usr) => usr.ID == 5);
 
                 List<DataRepository.Entitys.Message> messages =
-                    Context.Messages.Where((msg) => msg.Text.Contains("Nguyen") && msg.Channel.Id == 5).ToList();
+                    context.Messages.Where((msg) => msg.Text.Contains("Nguyen") && msg.Channel.ID == 5).ToList();
                 foreach (DataRepository.Entitys.Message msg in messages)
                 {
                     //msg.Text
@@ -61,7 +57,7 @@ namespace QuickNetChat.Client
                 {
                     button3.Text = user1.Name;
                     user1.Name = $"{DateTime.Now}";
-                    Context.SaveChanges();
+                    context.SaveChanges();
                     //int x = int.Parse();
 
                 }
