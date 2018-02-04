@@ -1,6 +1,7 @@
 ﻿namespace QuickNetChat.Server
 {
-    public class Class1
+    public class ServerHandler
     {
+
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuickNetChat.DataRepository.Entitys;
+using QuickNetChat.Server;
 
 namespace QuickNetChat.Client
 {
@@ -43,7 +45,7 @@ namespace QuickNetChat.Client
             {
                 //lumber-Expression:  // Filter-Condition
                 User user1 = context.Users.FirstOrDefault((usr) => usr.ID == 5);
-
+           
                 List<DataRepository.Entitys.Message> messages =
                     context.Messages.Where((msg) => msg.Text.Contains("Nguyen") && msg.Channel.ID == 5).ToList();
                 foreach (DataRepository.Entitys.Message msg in messages)
@@ -77,6 +79,16 @@ namespace QuickNetChat.Client
                     Application.DoEvents();
                 }
             }).RunSynchronously();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Program.TcpHandler.StartServer();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Program.TcpHandler.ConnectToIp(IPAddress.Loopback, 5001);
         }
     }
 }

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
+using QuickNetChat.Server;
 
 namespace QuickNetChat.Client
 {
     static class Program
     {
         public static DataRepository.DataRepository DataRepository;
+        public static Server.TcpHandler TcpHandler;
 
         /// <summary>
         /// The main entry point for the application.
@@ -25,6 +27,7 @@ namespace QuickNetChat.Client
             Application.DoEvents();
             // Create DataRepository
             DataRepository = new DataRepository.DataRepository();
+            TcpHandler = new TcpHandler();
 
             // Close SplashScreen & Show UI
             splashScreen.Close();
