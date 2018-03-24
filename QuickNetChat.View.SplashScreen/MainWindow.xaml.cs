@@ -1,28 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using QuickNetChat.View.SplashScreen.Exceptions;
 
 namespace QuickNetChat.View.SplashScreen
 {
+    /// <inheritdoc cref="Window" />
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    ///     Interaktionslogik für MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string _lastUpdateProgress;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void UpdateProgress(string message, string submessage)
+        {
+            // Set last message, apply message to loading bar.
+            _lastUpdateProgress = message;
+            LabelProgressMessage.Content = $"{message} - {submessage}";
+            //TODO: Run async
+        }
+
+        public void UpdateProgress(string submessage)
+        {
+            // No last update progress message setten -> exception;
+            if (_lastUpdateProgress == null)
+                throw new SplashScreenProgressException(
+                    "The function 'UpdateProgress(message, submessage)' " +
+                    "must called first once before UpdateProgress(submessage).");
+
+            // Call update progress with last main message.
+            UpdateProgress(_lastUpdateProgress, submessage);
         }
     }
 }

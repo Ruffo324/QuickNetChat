@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using QuickNetChat.Server;
+using QuickNetChat.View.SplashScreen;
 
 namespace QuickNetChat.Client
 {
@@ -18,16 +19,19 @@ namespace QuickNetChat.Client
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Open SplashScreen
-            SplashScreen splashScreen = new SplashScreen();
+            // Startup process in new task
+            MainWindow splashScreen = new MainWindow();
             splashScreen.Show();
 
-            splashScreen.SetLoadingText("Initializing Database");
-
-            Application.DoEvents();
             // Create DataRepository
+            splashScreen.UpdateProgress("Data repository", "initializing.");
             DataRepository = new DataRepository.DataRepository();
+            splashScreen.UpdateProgress("done.");
+
+            // Create TcpHandler
+            splashScreen.UpdateProgress("Tcp handler", "initializing.");
             TcpHandler = new TcpHandler();
+            splashScreen.UpdateProgress("done.");
 
             // Close SplashScreen & Show UI
             splashScreen.Close();
