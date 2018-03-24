@@ -1,0 +1,12 @@
+﻿<Window x:Class="QuickNetChat.View.Browse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickNetChat.View.Browse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="673.132" Width="292.105">
+    <Grid>
+        
+    </Grid>
+</Window>
