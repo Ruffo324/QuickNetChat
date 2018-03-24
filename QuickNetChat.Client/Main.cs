@@ -5,7 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuickNetChat.DataRepository.Entitys;
-using QuickNetChat.Server;
+using Message = QuickNetChat.DataRepository.Entitys.Message;
 
 namespace QuickNetChat.Client
 {
@@ -18,37 +18,35 @@ namespace QuickNetChat.Client
 
         private void Main_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             using (var context = Program.DataRepository.GetContext())
             {
-
-                User user1 = new User() { Name = "user1" };
+                User user1 = new User {Name = "user1"};
                 //new DataRepository.Entitys.User() { Name = "TQN", Mail = "test@web.de" }
                 context.Users.Add(user1);
                 // Program.DataRepository.GetContext().Users.Add(new User() { Name = "TQN", Mail = "test@web.de" });
                 context.SaveChanges();
             }
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             using (var context = Program.DataRepository.GetContext())
 
             {
                 //lumber-Expression:  // Filter-Condition
-                User user1 = context.Users.FirstOrDefault((usr) => usr.ID == 5);
-           
-                List<DataRepository.Entitys.Message> messages =
-                    context.Messages.Where((msg) => msg.Text.Contains("Nguyen") && msg.Channel.ID == 5).ToList();
-                foreach (DataRepository.Entitys.Message msg in messages)
+                User user1 = context.Users.FirstOrDefault(usr => usr.ID == 5);
+
+                List<Message> messages =
+                    context.Messages.Where(msg => msg.Text.Contains("Nguyen") && msg.Channel.ID == 5).ToList();
+                foreach (Message msg in messages)
                 {
                     //msg.Text
                 }
@@ -61,7 +59,6 @@ namespace QuickNetChat.Client
                     user1.Name = $"{DateTime.Now}";
                     context.SaveChanges();
                     //int x = int.Parse();
-
                 }
             }
         }

@@ -4,16 +4,16 @@ using QuickNetChat.Server;
 
 namespace QuickNetChat.Client
 {
-    static class Program
+    internal static class Program
     {
         public static DataRepository.DataRepository DataRepository;
-        public static Server.TcpHandler TcpHandler;
+        public static TcpHandler TcpHandler;
 
         /// <summary>
-        /// The main entry point for the application.
+        ///     The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

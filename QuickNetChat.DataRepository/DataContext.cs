@@ -6,6 +6,10 @@ namespace QuickNetChat.DataRepository
 {
     public class DataContext : DbContext
     {
+        public DataContext() : base(DataConsts.ConnectionString)
+        {
+        }
+
         // Define Db-Sets
         public DbSet<User> Users { get; set; }
 
@@ -14,12 +18,6 @@ namespace QuickNetChat.DataRepository
         public DbSet<Message> Messages { get; set; }
 
         public DbSet<Media> Media { get; set; }
-
-
-        public DataContext() : base(DataConsts.ConnectionString)
-        {
-
-        }
 
         internal void FirstInit()
         {

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuickNetChat.DataRepository.Entitys;
 
@@ -15,9 +11,9 @@ namespace QuickNetChat.Server
 {
     public class TcpHandler
     {
+        public TcpClient Client;
 
         public TcpListener Server;
-        public TcpClient Client;
 
         public Thread ServerThread;
 
@@ -35,10 +31,10 @@ namespace QuickNetChat.Server
             while (true)
             {
                 TcpClient client = new TcpClient();
-                client = Server.AcceptTcpClient();// AcceptTcpClient();
+                client = Server.AcceptTcpClient(); // AcceptTcpClient();
                 if (client.Connected)
                 {
-                    Thread clientThread = new Thread(new ParameterizedThreadStart(AcceptClientsThread));
+                    Thread clientThread = new Thread(AcceptClientsThread);
                     clientThread.Start(client);
                 }
             }
@@ -46,24 +42,23 @@ namespace QuickNetChat.Server
 
         public static void AcceptClientsThread(object aTcpClient)
         {
-            var tcpClient = (System.Net.Sockets.TcpClient)aTcpClient;
+            var tcpClient = (TcpClient) aTcpClient;
             NetworkStream stream = tcpClient.GetStream();
 
             if (stream.CanRead)
             {
                 byte[] bytes = new byte[tcpClient.ReceiveBufferSize];
-                stream.Read(bytes, 0, (int)tcpClient.ReceiveBufferSize);
+                stream.Read(bytes, 0, tcpClient.ReceiveBufferSize);
                 string returndata = Encoding.UTF8.GetString(bytes);
             }
         }
 
         public bool ConnectToIp(IPAddress aipAddress, int aPort)
-        {            
+        {
             Ping pingIpaddressPing = new Ping();
-            int timeout = 500;        
+            int timeout = 500;
             PingReply reply = pingIpaddressPing.Send(aipAddress, timeout);
             if (reply != null && reply.Status == IPStatus.Success)
-            {
                 try
                 {
                     Client = new TcpClient();
@@ -75,13 +70,8 @@ namespace QuickNetChat.Server
                     MessageBox.Show("Exception: " + ex.Message);
                     return false;
                 }
-                
-            }
-            else
-            {
-                return false;
-            }
-            
+
+            return false;
         }
 
         // ALLES AB HIER IGNORIEREN
@@ -117,6 +107,7 @@ namespace QuickNetChat.Server
         {
             return Ausr.Mail == "test@web.de";
         }
+
         /*
         private bool test2(Func<User, bool> usrFunc)
         {

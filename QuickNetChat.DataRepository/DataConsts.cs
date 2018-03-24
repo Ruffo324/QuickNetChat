@@ -3,12 +3,12 @@
     internal static class DataConsts
     {
         /// <summary>
-        /// The Name for the created Database.
+        ///     The Name for the created Database.
         /// </summary>
         internal const string DatabaseName = "QuickNetChat";
 
         /// <summary>
-        /// The Connection String for the EntityFramework. a
+        ///     The Connection String for the EntityFramework. a
         /// </summary>
         internal const string ConnectionString =
             "Data Source=(localdb)\\MSSQLLocalDB;" + // <- LocalDB
