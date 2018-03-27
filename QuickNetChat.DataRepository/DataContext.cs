@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Threading.Tasks;
 using QuickNetChat.DataRepository.Entitys;
 
 namespace QuickNetChat.DataRepository
@@ -34,7 +35,7 @@ namespace QuickNetChat.DataRepository
         /// <summary>
         ///     Function to initalize the DataContext the first time.
         /// </summary>
-        internal async void FirstInit()
+        internal async Task FirstInit()
         {
             Database.SetInitializer<DataContext>(null);
 

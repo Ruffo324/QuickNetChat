@@ -1,10 +1,12 @@
-﻿namespace QuickNetChat.DataRepository
+﻿using System.Threading.Tasks;
+
+namespace QuickNetChat.DataRepository
 {
     public class DataRepository
     {
         public DataRepository()
         {
-            new DataContext().FirstInit();
+            new Task(async () => { await new DataContext().FirstInit(); }).Start();
         }
 
         public DataContext GetContext()
