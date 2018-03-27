@@ -21,7 +21,6 @@ namespace QuickNetChat.View.SplashScreen
             // Set last message, apply message to loading bar.
             _lastUpdateProgress = message;
             LabelProgressMessage.Content = $"{message} - {submessage}";
-            //TODO: Run async
         }
 
         public void UpdateProgress(string submessage)

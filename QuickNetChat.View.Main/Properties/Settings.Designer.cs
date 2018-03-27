@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuickNetChat.View.Browse.Properties
+namespace QuickNetChat.View.Main.Properties
 {
 
 

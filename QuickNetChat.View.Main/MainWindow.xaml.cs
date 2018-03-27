@@ -13,8 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuickNetChat.View.Browse
+namespace QuickNetChat.View.Main
 {
+    /// <inheritdoc cref="Window" />
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
