@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using QuickNetChat.DataRepository.Entitys;
 
@@ -6,6 +7,15 @@ namespace QuickNetChat.DataRepository
 {
     public class DataContext : DbContext
     {
+        /// <summary>
+        ///     Event delegate for the OnAfterDataContextInitalized event.
+        /// </summary>
+        public delegate void AfterDataContextInitalized();
+
+        /// <inheritdoc />
+        /// <summary>
+        ///     Constructor. Calls the DbContext Base function with the DataConsts.ConnectionString.
+        /// </summary>
         public DataContext() : base(DataConsts.ConnectionString)
         {
         }
@@ -19,7 +29,12 @@ namespace QuickNetChat.DataRepository
 
         public DbSet<Media> Media { get; set; }
 
-        internal void FirstInit()
+        public static event AfterDataContextInitalized OnDataContextInitialized;
+
+        /// <summary>
+        ///     Function to initalize the DataContext the first time.
+        /// </summary>
+        internal async void FirstInit()
         {
             Database.SetInitializer<DataContext>(null);
 
@@ -31,10 +46,32 @@ namespace QuickNetChat.DataRepository
                 AutomaticMigrationsEnabled = true
             };
 
+            // Assign database migrator and update it.
             DbMigrator dbMigrator = new DbMigrator(migrationsConfiguration);
             dbMigrator.Update();
 
-            Database.Connection.Open();
+            // Bind event and open the DataContext async.
+            Database.Connection.StateChange += ConnectionOnStateChange;
+            await Database.Connection.OpenAsync().ConfigureAwait(false);
+        }
+
+        /// <summary>
+        ///     Called if the Database.Connection state is changed.
+        /// </summary>
+        /// <param name="sender">Caller object of this event.</param>
+        /// <param name="stateChangeEventArgs">State changed event arguments</param>
+        private void ConnectionOnStateChange(object sender, StateChangeEventArgs stateChangeEventArgs)
+        {
+            if (stateChangeEventArgs.CurrentState == ConnectionState.Open)
+                OnOnDataContextInitialized();
+        }
+
+        /// <summary>
+        ///     Called if the Data context is fully initialized.
+        /// </summary>
+        protected virtual void OnOnDataContextInitialized()
+        {
+            OnDataContextInitialized?.Invoke();
         }
     }
 }

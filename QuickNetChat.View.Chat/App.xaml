@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:QuickNetChat.View.Chat"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>
