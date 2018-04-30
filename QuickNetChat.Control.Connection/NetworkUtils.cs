@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 
-namespace QuickNetChat.Control.Server
+namespace QuickNetChat.Control.Connection
 {
     internal static class NetworkUtils
     {
@@ -16,7 +16,6 @@ namespace QuickNetChat.Control.Server
         /// <returns>Broadcast adress of the network.</returns>
         public static IPAddress GetBroadcastAddress(IPAddress address, IPAddress subnetmask)
         {
-
             uint ipAddress = BitConverter.ToUInt32(address.GetAddressBytes(), 0);
             uint ipMaskV4 = BitConverter.ToUInt32(subnetmask.GetAddressBytes(), 0);
             uint broadCastIpAddress = ipAddress | ~ipMaskV4;
@@ -25,17 +24,17 @@ namespace QuickNetChat.Control.Server
         }
 
         /// <summary>
-        /// This function returning the subnet masks for all given network adapters.
+        ///     This function returning the subnet masks for all given network adapters.
         /// </summary>
         /// <returns>Dictionary with subnet mask for all given network adapters.</returns>
         public static Dictionary<NetworkInterface, IPAddress> GetOwnSubnetMasks()
         {
             Dictionary<NetworkInterface, IPAddress> subnetAddresses = new Dictionary<NetworkInterface, IPAddress>();
             foreach (NetworkInterface adapter in NetworkInterface.GetAllNetworkInterfaces())
-            foreach (UnicastIPAddressInformation unicastIPAddressInformation in adapter.GetIPProperties()
+            foreach (UnicastIPAddressInformation unicastIpAddressInformation in adapter.GetIPProperties()
                 .UnicastAddresses)
-                if (unicastIPAddressInformation.Address.AddressFamily == AddressFamily.InterNetwork)
-                    subnetAddresses.Add(adapter, unicastIPAddressInformation.IPv4Mask);
+                if (unicastIpAddressInformation.Address.AddressFamily == AddressFamily.InterNetwork)
+                    subnetAddresses.Add(adapter, unicastIpAddressInformation.IPv4Mask);
 
             return subnetAddresses;
         }

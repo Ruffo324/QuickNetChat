@@ -7,8 +7,8 @@
     <ProjectGuid>{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuickNetChat.Control.Server</RootNamespace>
-    <AssemblyName>QuickNetChat.Control.Server</AssemblyName>
+    <RootNamespace>QuickNetChat.Control.Connection</RootNamespace>
+    <AssemblyName>QuickNetChat.Control.Connection</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -54,7 +54,10 @@
     <Compile Include="Exceptions\AlreadyOpenException.cs" />
     <Compile Include="LocalServer.cs" />
     <Compile Include="LocalServerHandler.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="NetworkUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NetworkScanner.cs" />
     <Compile Include="TcpHandler.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace QuickNetChat.Control.Server.Exceptions
+namespace QuickNetChat.Control.Connection.Exceptions
 {
     public class AlreadyOpenException : Exception
     {
@@ -9,6 +9,8 @@ namespace QuickNetChat.Control.Server.Exceptions
         ///     Throws a new already open exception.
         ///     Used if an connection is already open.
         /// </summary>
-        public AlreadyOpenException() => throw new AlreadyOpenException();
+        public AlreadyOpenException(string message) : base(message)
+        {
+        }
     }
 }

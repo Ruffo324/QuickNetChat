@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 
-namespace QuickNetChat.Control.Server
+namespace QuickNetChat.Control.Connection
 {
     /// <summary>
     ///     This scanner takes care about scanning the network for other chat clients.

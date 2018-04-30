@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace QuickNetChat.Control.Server
+namespace QuickNetChat.Control.Connection
 {
     /// <summary>
     ///     The LocalServerHandler takes care about the communication of the local server.

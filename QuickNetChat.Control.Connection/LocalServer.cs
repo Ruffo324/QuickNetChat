@@ -1,4 +1,4 @@
-﻿namespace QuickNetChat.Control.Server
+﻿namespace QuickNetChat.Control.Connection
 {
     /// <summary>
     ///     This is the local server for each programm instance.
@@ -15,6 +15,7 @@
         /// </summary>
         private LocalServer()
         {
+
         }
 
         

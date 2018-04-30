@@ -7,7 +7,7 @@ using System.Threading;
 using System.Windows.Forms;
 using QuickNetChat.Data.DataRepository.Entitys;
 
-namespace QuickNetChat.Control.Server
+namespace QuickNetChat.Control.Connection
 {
     public class TcpHandler
     {

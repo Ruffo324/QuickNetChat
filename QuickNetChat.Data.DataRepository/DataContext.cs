@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Threading.Tasks;
+using QuickNetChat.Data.DataRepository.Conventions;
 using QuickNetChat.Data.DataRepository.Entitys;
 
 namespace QuickNetChat.Data.DataRepository
@@ -54,6 +55,16 @@ namespace QuickNetChat.Data.DataRepository
             // Bind event and open the DataContext async.
             Database.Connection.StateChange += ConnectionOnStateChange;
             await Database.Connection.OpenAsync().ConfigureAwait(false);
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        ///     Overwriting Convention to allow private fields
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Add(new NonPublicColumnAttributeConvention());
         }
 
         /// <summary>

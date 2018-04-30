@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.View.Main", "Q
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.Data.DataRepository", "QuickNetChat.Data.DataRepository\QuickNetChat.Data.DataRepository.csproj", "{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.Control.Server", "QuickNetChat.Control.Server\QuickNetChat.Control.Server.csproj", "{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.Control.Connection", "QuickNetChat.Control.Connection\QuickNetChat.Control.Connection.csproj", "{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
