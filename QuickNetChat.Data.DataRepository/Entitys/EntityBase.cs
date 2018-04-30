@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace QuickNetChat.DataRepository.Entitys
+namespace QuickNetChat.Data.DataRepository.Entitys
 {
     /// <summary>
     ///     Base class als parent for other entitys

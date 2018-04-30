@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace QuickNetChat.DataRepository
+namespace QuickNetChat.Data.DataRepository
 {
     public class DataRepository
     {

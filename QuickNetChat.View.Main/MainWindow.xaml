@@ -5,6 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuickNetChat.View.Main"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid />
+        Title="QuickNetChat" Height="450" Width="212.829">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="667*" />
+      <ColumnDefinition Width="125*" />
+    </Grid.ColumnDefinitions>
+  </Grid>
 </Window>

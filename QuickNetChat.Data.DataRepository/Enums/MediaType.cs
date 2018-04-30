@@ -1,4 +1,4 @@
-﻿namespace QuickNetChat.DataRepository.Enums
+﻿namespace QuickNetChat.Data.DataRepository.Enums
 {
     public enum MediaType
     {

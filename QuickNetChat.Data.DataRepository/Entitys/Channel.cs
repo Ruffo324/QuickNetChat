@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace QuickNetChat.DataRepository.Entitys
+namespace QuickNetChat.Data.DataRepository.Entitys
 {
     /// <summary>
     ///     Contains all known channel for the client

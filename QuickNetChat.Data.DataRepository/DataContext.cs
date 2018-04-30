@@ -2,9 +2,9 @@
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Threading.Tasks;
-using QuickNetChat.DataRepository.Entitys;
+using QuickNetChat.Data.DataRepository.Entitys;
 
-namespace QuickNetChat.DataRepository
+namespace QuickNetChat.Data.DataRepository
 {
     public class DataContext : DbContext
     {

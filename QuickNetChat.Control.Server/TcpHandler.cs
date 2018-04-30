@@ -5,9 +5,9 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using QuickNetChat.DataRepository.Entitys;
+using QuickNetChat.Data.DataRepository.Entitys;
 
-namespace QuickNetChat.Server
+namespace QuickNetChat.Control.Server
 {
     public class TcpHandler
     {

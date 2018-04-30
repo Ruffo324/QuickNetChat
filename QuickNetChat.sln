@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.Server", "QuickNetChat.Server\QuickNetChat.Server.csproj", "{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.DataRepository", "QuickNetChat.DataRepository\QuickNetChat.DataRepository.csproj", "{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.View.Chat", "QuickNetChat.View.Chat\QuickNetChat.View.Chat.csproj", "{736BFE43-8425-4626-98A7-04AC699550E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.View.SplashScreen", "QuickNetChat.View.SplashScreen\QuickNetChat.View.SplashScreen.csproj", "{F1BEAF32-1B70-4769-BC23-D4840125CEDE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.View.Main", "QuickNetChat.View.Main\QuickNetChat.View.Main.csproj", "{AC7C044C-EBE7-4753-8330-ED512F8A5799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.Data.DataRepository", "QuickNetChat.Data.DataRepository\QuickNetChat.Data.DataRepository.csproj", "{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickNetChat.Control.Server", "QuickNetChat.Control.Server\QuickNetChat.Control.Server.csproj", "{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{736BFE43-8425-4626-98A7-04AC699550E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{736BFE43-8425-4626-98A7-04AC699550E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{736BFE43-8425-4626-98A7-04AC699550E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +31,14 @@ Global
 		{AC7C044C-EBE7-4753-8330-ED512F8A5799}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC7C044C-EBE7-4753-8330-ED512F8A5799}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC7C044C-EBE7-4753-8330-ED512F8A5799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2AE21E3-D85C-4DAB-815B-FA7CFEF9FAE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

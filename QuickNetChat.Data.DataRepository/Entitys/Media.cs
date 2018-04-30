@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using QuickNetChat.DataRepository.Enums;
+using QuickNetChat.Data.DataRepository.Enums;
 
-namespace QuickNetChat.DataRepository.Entitys
+namespace QuickNetChat.Data.DataRepository.Entitys
 {
     /// <summary>
     ///     Contains the transfered media.

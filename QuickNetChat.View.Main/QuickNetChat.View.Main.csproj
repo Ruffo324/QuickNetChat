@@ -102,10 +102,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QuickNetChat.DataRepository\QuickNetChat.DataRepository.csproj">
-      <Project>{72F7F5DD-D42D-4FC5-884D-A92ABDBA3BC3}</Project>
-      <Name>QuickNetChat.DataRepository</Name>
-    </ProjectReference>
     <ProjectReference Include="..\QuickNetChat.View.SplashScreen\QuickNetChat.View.SplashScreen.csproj">
       <Project>{f1beaf32-1b70-4769-bc23-d4840125cede}</Project>
       <Name>QuickNetChat.View.SplashScreen</Name>

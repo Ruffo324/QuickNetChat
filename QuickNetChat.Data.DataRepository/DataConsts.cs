@@ -1,4 +1,4 @@
-﻿namespace QuickNetChat.DataRepository
+﻿namespace QuickNetChat.Data.DataRepository
 {
     internal static class DataConsts
     {

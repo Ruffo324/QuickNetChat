@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Net;
 
-namespace QuickNetChat.DataRepository.Entitys
+namespace QuickNetChat.Data.DataRepository.Entitys
 {
     /// <summary>
     ///     Contains all users that are visible or have already been contacted.
