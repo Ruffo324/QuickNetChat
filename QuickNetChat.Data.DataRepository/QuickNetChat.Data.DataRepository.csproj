@@ -47,9 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conventions\NonPublicColumnAttributeConvention.cs" />
     <Compile Include="DataConsts.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="DataRepository.cs" />
+    <Compile Include="Entitys\Setting.cs" />
     <Compile Include="Entitys\EntityBase.cs" />
     <Compile Include="Entitys\Media.cs" />
     <Compile Include="Entitys\Channel.cs" />
