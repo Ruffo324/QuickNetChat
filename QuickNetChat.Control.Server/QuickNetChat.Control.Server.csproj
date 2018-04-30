@@ -51,8 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\AlreadyOpenException.cs" />
     <Compile Include="LocalServer.cs" />
-    <Compile Include="ServerHandler.cs" />
+    <Compile Include="LocalServerHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TcpHandler.cs" />
   </ItemGroup>

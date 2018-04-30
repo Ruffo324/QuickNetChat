@@ -17,6 +17,16 @@
         {
         }
 
+        
+        /// <summary>
+        ///     Starts the local server.
+        /// </summary>
+        /// <returns>True if start successfully. False otherwise.</returns>
+        public bool Start()
+        {
+            return true;
+        }
+
         /// <summary>
         ///     Singleton instance of the local server.
         /// </summary>
